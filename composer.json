@@ -1,3 +1,10 @@
 {
-
+    "name": "fruitsailor/framework",
+    "authors": [
+        {
+            "name": "Peter Bronkalla",
+            "email": "peterbronkalla@googlemail.com"
+        }
+    ],
+    "require": {}
 }
