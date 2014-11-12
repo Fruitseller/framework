@@ -6,5 +6,7 @@
             "email": "peterbronkalla@googlemail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "filp/whoops": "~1.1"
+    }
 }
