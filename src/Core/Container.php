@@ -3,8 +3,9 @@
 namespace framework\Core;
 
 use ReflectionClass;
+use ArrayAccess;
 
-class Container {
+class Container implements ArrayAccess {
 
 	protected $bindings = [];
 
@@ -68,4 +69,22 @@ class Container {
 
 		return $object;
 	}
+
+	public function offsetGet($key) {
+		return $this->resolve($key);
+	}
+
+	public function offsetSet($key, $value) {
+		return $this->bind($key, $value);
+	}
+
+	public function offsetExists($key) {
+		return array_key_exists($key, $this->bindings);
+	}
+
+	public function offsetUnset($key) {
+		unset($this->bindings[$key]);
+	}
+
+
 }

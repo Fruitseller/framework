@@ -31,6 +31,14 @@ class ContainerTest extends PHPUnit_Framework_TestCase {
 		$this->assertInstanceOf('Bar', $object);
 	}
 
+	public function testArrayAccessSuccess() {
+
+		$this->container['baz'] = 'Bar';
+		$object = $this->container['baz'];
+
+		$this->assertInstanceOf('Bar', $object);
+	}
+
 }
 
 class Foo {}
