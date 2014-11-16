@@ -5,7 +5,7 @@ namespace framework\Core;
 use Whoops\Run as WhoopsRun;
 use Whoops\Handler\PrettyPageHandler as WhoopsPrettyPageHandler;
 
-class Application {
+class Application extends Container {
 	public function run() {
 		$this->initWhoops();
 	}
